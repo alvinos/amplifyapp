@@ -1,0 +1,33 @@
+type Note @model {
+  id: ID!
+  name: String!
+  description: String
+  image: String
+}
+
+type Player @model {
+  id: ID!
+  firstName: String!
+  surName: String!
+  email: String!
+  rank: Int
+  beltColour: BeltColour
+}
+
+type Challenge @model 
+{
+  player1: Player
+  player2: Player
+  winner: Player
+  notes: String
+}
+
+enum BeltColour {
+  WHITE
+  YELLOW
+  ORANGE
+  GREEN
+  BLUE
+  BROWN
+  BLACK
+}
